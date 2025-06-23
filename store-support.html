@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Support - GALTAP</title>
+    <title>App Support - George Galai</title>
     <style>
         * {
             margin: 0;
@@ -11,97 +11,118 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: #007AFF;
+            --primary-dark: #0051D5;
+            --text-primary: #1D1D1F;
+            --text-secondary: #86868B;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-light: #D2D2D7;
+            --shadow-light: rgba(0, 0, 0, 0.04);
+            --shadow-medium: rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+            --border-radius-large: 20px;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #0f172a;
-            background: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 60px max(20px, env(safe-area-inset-left));
         }
         
         .header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 60px;
         }
         
         .header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.005em;
         }
         
         .header p {
-            font-size: 1.1rem;
-            color: #64748b;
+            font-size: 21px;
+            color: var(--text-secondary);
+            line-height: 1.5;
         }
         
         .support-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
+            background: var(--bg-primary);
+            padding: 48px;
+            border-radius: var(--border-radius-large);
+            border: 1px solid var(--border-light);
+            margin-bottom: 32px;
             text-align: center;
+            box-shadow: 0 4px 16px var(--shadow-light);
         }
         
         .support-card h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 1rem;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
         }
         
         .support-card p {
-            color: #64748b;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 19px;
+            line-height: 1.5;
         }
         
         .email-link {
             display: inline-block;
-            padding: 1rem 2rem;
-            background: #6366f1;
+            padding: 16px 32px;
+            background: var(--primary);
             color: white;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 17px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px var(--shadow-medium);
         }
         
         .email-link:hover {
-            background: #4f46e5;
+            background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 8px 24px rgba(0, 122, 255, 0.3);
         }
         
         .faq-section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
+            background: var(--bg-primary);
+            padding: 48px;
+            border-radius: var(--border-radius-large);
+            border: 1px solid var(--border-light);
+            margin-bottom: 32px;
+            box-shadow: 0 4px 16px var(--shadow-light);
         }
         
         .faq-section h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 32px;
             text-align: center;
         }
         
         .faq-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border-light);
         }
         
         .faq-item:last-child {
@@ -112,41 +133,87 @@
         
         .faq-question {
             font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: 19px;
         }
         
         .faq-answer {
-            color: #64748b;
-            line-height: 1.6;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-size: 17px;
         }
         
         .back-link {
             display: inline-block;
-            color: #6366f1;
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
+            font-size: 17px;
             transition: color 0.3s ease;
         }
         
         .back-link:hover {
-            color: #4f46e5;
+            color: var(--primary-dark);
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 2rem 1rem;
+                padding: 40px 20px;
+            }
+            
+            .header {
+                margin-bottom: 40px;
             }
             
             .header h1 {
-                font-size: 2rem;
+                font-size: 32px;
+            }
+            
+            .header p {
+                font-size: 19px;
             }
             
             .support-card,
             .faq-section {
-                padding: 2rem;
+                padding: 32px 24px;
             }
+            
+            .support-card h2,
+            .faq-section h2 {
+                font-size: 24px;
+            }
+            
+            .support-card p {
+                font-size: 17px;
+            }
+            
+            .faq-question {
+                font-size: 17px;
+            }
+            
+            .faq-answer {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .support-card,
+            .faq-section {
+                padding: 24px 20px;
+            }
+            
+            .email-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        /* Focus states for accessibility */
+        .email-link:focus,
+        .back-link:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -154,13 +221,13 @@
     <div class="container">
         <div class="header">
             <h1>App Support</h1>
-            <p>We're here to help with any questions about our mobile apps</p>
+            <p>I'm here to help with any questions about my mobile apps</p>
         </div>
         
         <div class="support-card">
             <h2>Get Help</h2>
-            <p>Have a question or need assistance? We typically respond within 24 hours.</p>
-            <a href="mailto:support@galtap.com" class="email-link">Email Support</a>
+            <p>Have a question or need assistance? I typically respond within 24 hours.</p>
+            <a href="mailto:hi@galtap.com" class="email-link">Email Support</a>
         </div>
         
         <div class="faq-section">
@@ -168,7 +235,7 @@
             
             <div class="faq-item">
                 <div class="faq-question">How do I get started?</div>
-                <div class="faq-answer">Download our app from the App Store and follow the simple setup process.</div>
+                <div class="faq-answer">Download the app from the App Store and follow the simple setup process.</div>
             </div>
             
             <div class="faq-item">
@@ -178,7 +245,17 @@
             
             <div class="faq-item">
                 <div class="faq-question">How do I delete my account?</div>
-                <div class="faq-answer">Contact us at support@galtap.com with your deletion request.</div>
+                <div class="faq-answer">Contact me at hi@galtap.com with your deletion request.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How can I suggest new features?</div>
+                <div class="faq-answer">I'd love to hear your ideas! Send me an email with your feature suggestions.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is my data secure?</div>
+                <div class="faq-answer">Yes, your privacy and data security are my top priorities. Check the privacy policy for details.</div>
             </div>
         </div>
         
