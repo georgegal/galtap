@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>George Galai - Cross Platform Mobile App Developer</title>
+    <title>Cross Platform Mobile App Development</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -81,12 +81,15 @@
             font-size: 20px;
             font-weight: 600;
             color: var(--text-primary);
+            opacity: 0;
+            pointer-events: none;
         }
         
         .nav-links {
             display: flex;
             gap: 40px;
             list-style: none;
+            margin: 0 auto;
         }
         
         .nav-links a {
@@ -99,11 +102,6 @@
         
         .nav-links a:hover {
             color: var(--primary);
-        }
-        
-        .nav-links .linkedin-link {
-            color: var(--primary);
-            font-weight: 500;
         }
         
         .cta-button {
@@ -213,7 +211,7 @@
             box-shadow: 0 4px 16px var(--shadow-medium);
         }
         
-        /* Phone mockups with frosted glass effect */
+        /* Beautiful illustration */
         .hero-visual {
             display: flex;
             justify-content: center;
@@ -221,49 +219,28 @@
             position: relative;
         }
         
-        .phone-mockup {
-            width: 200px;
-            height: 400px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 20px;
-            box-shadow: 0 20px 40px var(--shadow-heavy);
-            position: relative;
-            animation: float-phone 6s ease-in-out infinite;
-        }
-        
-        .phone-mockup:nth-child(2) {
-            animation-delay: -2s;
-            margin-left: -40px;
-            margin-top: 40px;
-            transform: scale(0.85);
-        }
-        
-        .phone-mockup:nth-child(3) {
-            animation-delay: -4s;
-            margin-left: -40px;
-            margin-top: -40px;
-            transform: scale(0.9);
-        }
-        
-        @keyframes float-phone {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-16px); }
-        }
-        
-        .phone-screen {
+        .illustration {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 16px;
+            max-width: 500px;
+            height: auto;
+        }
+        
+        .floating-element {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(2) {
+            animation-delay: -2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            animation-delay: -4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
         
         /* Services Section */
@@ -413,14 +390,6 @@
             box-shadow: 0 8px 24px var(--shadow-heavy);
         }
         
-        .linkedin-button {
-            background: #0077B5;
-        }
-        
-        .linkedin-button:hover {
-            background: #005885;
-        }
-        
         /* Footer */
         .footer {
             background: var(--bg-secondary);
@@ -444,11 +413,6 @@
             
             .hero-visual {
                 order: -1;
-            }
-            
-            .phone-mockup:nth-child(2),
-            .phone-mockup:nth-child(3) {
-                display: none;
             }
         }
         
@@ -600,13 +564,10 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">George Galai</div>
+            <div class="logo"></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="https://www.linkedin.com/in/galaigeorge" target="_blank" class="linkedin-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="cta-button">Get Started</a>
@@ -618,22 +579,112 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Crafting <span class="highlight">Exceptional</span> Mobile Experiences</h1>
-                <p>I build premium iOS and Android apps that users love. From concept to App Store, I turn your vision into reality with cutting-edge design and flawless development.</p>
+                <p>We build premium iOS and Android apps that users love. From concept to App Store, we turn your vision into reality with cutting-edge design and flawless development.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">Start Your Project</a>
-                    <a href="#services" class="btn-secondary">My Services</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-screen">iOS App</div>
-                </div>
-                <div class="phone-mockup">
-                    <div class="phone-screen">Android</div>
-                </div>
-                <div class="phone-mockup">
-                    <div class="phone-screen">Cross Platform</div>
-                </div>
+                <svg class="illustration" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background gradient -->
+                    <defs>
+                        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#007AFF;stop-opacity:0.1" />
+                            <stop offset="100%" style="stop-color:#34C759;stop-opacity:0.1" />
+                        </linearGradient>
+                        <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#007AFF" />
+                            <stop offset="100%" style="stop-color:#34C759" />
+                        </linearGradient>
+                        <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1D1D1F" />
+                            <stop offset="100%" style="stop-color:#3A3A3C" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge> 
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <filter id="shadow">
+                            <feDropShadow dx="0" dy="8" stdDeviation="16" flood-opacity="0.15"/>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Background circle -->
+                    <circle cx="250" cy="200" r="180" fill="url(#bgGradient)" opacity="0.5"/>
+                    
+                    <!-- Main phone -->
+                    <g class="floating-element" transform="translate(200, 80)">
+                        <rect x="0" y="0" width="100" height="180" rx="20" ry="20" fill="url(#phoneGradient)" filter="url(#shadow)"/>
+                        <rect x="8" y="8" width="84" height="164" rx="16" ry="16" fill="url(#screenGradient)"/>
+                        <circle cx="50" cy="20" r="3" fill="#007AFF" opacity="0.6"/>
+                        <rect x="20" y="35" width="60" height="4" rx="2" fill="#007AFF" opacity="0.8"/>
+                        <rect x="20" y="45" width="40" height="3" rx="1.5" fill="#34C759" opacity="0.6"/>
+                        <rect x="20" y="55" width="50" height="3" rx="1.5" fill="#FF9500" opacity="0.6"/>
+                        
+                        <!-- App icons -->
+                        <rect x="20" y="75" width="12" height="12" rx="3" fill="#007AFF"/>
+                        <rect x="38" y="75" width="12" height="12" rx="3" fill="#34C759"/>
+                        <rect x="56" y="75" width="12" height="12" rx="3" fill="#FF9500"/>
+                        
+                        <rect x="20" y="95" width="12" height="12" rx="3" fill="#FF3B30"/>
+                        <rect x="38" y="95" width="12" height="12" rx="3" fill="#5856D6"/>
+                        <rect x="56" y="95" width="12" height="12" rx="3" fill="#AF52DE"/>
+                    </g>
+                    
+                    <!-- Secondary phone -->
+                    <g class="floating-element" transform="translate(120, 120) scale(0.8)">
+                        <rect x="0" y="0" width="80" height="140" rx="16" ry="16" fill="rgba(255,255,255,0.9)" filter="url(#shadow)"/>
+                        <rect x="6" y="6" width="68" height="128" rx="12" ry="12" fill="url(#screenGradient)"/>
+                        <circle cx="40" cy="16" r="2" fill="#007AFF" opacity="0.6"/>
+                        <rect x="16" y="28" width="48" height="3" rx="1.5" fill="#007AFF" opacity="0.8"/>
+                        <rect x="16" y="36" width="32" height="2.5" rx="1.25" fill="#34C759" opacity="0.6"/>
+                        
+                        <!-- Chart visualization -->
+                        <rect x="16" y="50" width="8" height="20" rx="2" fill="#007AFF" opacity="0.7"/>
+                        <rect x="28" y="45" width="8" height="25" rx="2" fill="#34C759" opacity="0.7"/>
+                        <rect x="40" y="55" width="8" height="15" rx="2" fill="#FF9500" opacity="0.7"/>
+                        <rect x="52" y="40" width="8" height="30" rx="2" fill="#FF3B30" opacity="0.7"/>
+                    </g>
+                    
+                    <!-- Tablet -->
+                    <g class="floating-element" transform="translate(320, 140) scale(0.7)">
+                        <rect x="0" y="0" width="120" height="90" rx="12" ry="12" fill="rgba(255,255,255,0.95)" filter="url(#shadow)"/>
+                        <rect x="6" y="6" width="108" height="78" rx="8" ry="8" fill="url(#screenGradient)"/>
+                        
+                        <!-- Grid layout -->
+                        <rect x="15" y="15" width="20" height="15" rx="3" fill="#007AFF" opacity="0.8"/>
+                        <rect x="40" y="15" width="20" height="15" rx="3" fill="#34C759" opacity="0.8"/>
+                        <rect x="65" y="15" width="20" height="15" rx="3" fill="#FF9500" opacity="0.8"/>
+                        <rect x="90" y="15" width="20" height="15" rx="3" fill="#FF3B30" opacity="0.8"/>
+                        
+                        <rect x="15" y="35" width="45" height="20" rx="4" fill="#5856D6" opacity="0.8"/>
+                        <rect x="65" y="35" width="45" height="20" rx="4" fill="#AF52DE" opacity="0.8"/>
+                        
+                        <rect x="15" y="60" width="95" height="8" rx="2" fill="#007AFF" opacity="0.6"/>
+                    </g>
+                    
+                    <!-- Floating elements -->
+                    <circle cx="100" cy="100" r="8" fill="#007AFF" opacity="0.3" class="floating-element"/>
+                    <circle cx="400" cy="80" r="6" fill="#34C759" opacity="0.4" class="floating-element"/>
+                    <circle cx="80" cy="300" r="10" fill="#FF9500" opacity="0.3" class="floating-element"/>
+                    <circle cx="420" cy="320" r="7" fill="#FF3B30" opacity="0.4" class="floating-element"/>
+                    
+                    <!-- Code symbols -->
+                    <text x="50" y="350" font-family="SF Mono, Monaco, monospace" font-size="24" fill="#007AFF" opacity="0.4" class="floating-element">&lt;/&gt;</text>
+                    <text x="400" y="360" font-family="SF Mono, Monaco, monospace" font-size="20" fill="#34C759" opacity="0.4" class="floating-element">{}</text>
+                    
+                    <!-- Connection lines -->
+                    <path d="M 150 200 Q 200 150 300 180" stroke="#007AFF" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="5,5">
+                        <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 300 220 Q 350 200 380 240" stroke="#34C759" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="5,5">
+                        <animate attributeName="stroke-dashoffset" values="0;10" dur="2.5s" repeatCount="indefinite"/>
+                    </path>
+                </svg>
             </div>
         </div>
     </section>
@@ -643,7 +694,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Premium Mobile Solutions</h2>
-                <p>From native development to cross-platform solutions, I deliver apps that stand out in the App Store</p>
+                <p>From native development to cross-platform solutions, we deliver apps that stand out in the App Store</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -669,7 +720,7 @@
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
                     <h3>App Store Optimization</h3>
-                    <p>Get discovered. From submission to featuring, I help your app succeed in the App Store.</p>
+                    <p>Get discovered. From submission to featuring, we help your app succeed in the App Store.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
@@ -690,10 +741,6 @@
                     <i class="fas fa-envelope"></i>
                     Get In Touch
                 </a>
-                <a href="https://www.linkedin.com/in/galaigeorge" target="_blank" class="contact-button linkedin-button">
-                    <i class="fab fa-linkedin"></i>
-                    Connect on LinkedIn
-                </a>
             </div>
         </div>
     </section>
@@ -701,7 +748,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 George Galai. Crafting exceptional mobile experiences.</p>
+            <p>&copy; 2025 Mobile Development Team. Crafting exceptional mobile experiences.</p>
         </div>
     </footer>
     
