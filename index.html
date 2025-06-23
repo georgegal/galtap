@@ -1,10 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross Platform Mobile App Development</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com data:; img-src 'self' data: https:; connect-src 'self'; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Primary Meta Tags -->
+    <title>Cross Platform Mobile App Development | Professional iOS & Android Apps</title>
+    <meta name="title" content="Cross Platform Mobile App Development | Professional iOS & Android Apps">
+    <meta name="description" content="We build premium iOS and Android apps that users love. From concept to App Store, we turn your vision into reality with cutting-edge design and flawless development.">
+    <meta name="keywords" content="mobile app development, iOS development, Android development, cross platform apps, Swift, Kotlin, React Native, Flutter, app design, mobile development team">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="George Galai">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://georgegal.github.io/galtap/">
+    <meta property="og:title" content="Cross Platform Mobile App Development | Professional iOS & Android Apps">
+    <meta property="og:description" content="We build premium iOS and Android apps that users love. From concept to App Store, we turn your vision into reality with cutting-edge design and flawless development.">
+    <meta property="og:image" content="https://georgegal.github.io/galtap/og-image.png">
+    <meta property="og:site_name" content="Mobile Development Team">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://georgegal.github.io/galtap/">
+    <meta name="twitter:title" content="Cross Platform Mobile App Development | Professional iOS & Android Apps">
+    <meta name="twitter:description" content="We build premium iOS and Android apps that users love. From concept to App Store, we turn your vision into reality with cutting-edge design and flawless development.">
+    <meta name="twitter:image" content="https://georgegal.github.io/galtap/twitter-image.png">
+    <meta name="twitter:creator" content="@georgegalai">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#007AFF">
+    <meta name="msapplication-TileColor" content="#007AFF">
+    
+    <!-- Performance & Resource Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mobile Development Team",
+      "description": "Professional mobile app development team specializing in iOS, Android, and cross-platform applications",
+      "url": "https://georgegal.github.io/galtap/",
+      "email": "hi@galtap.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/galaigeorge"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "George Galai",
+        "sameAs": "https://www.linkedin.com/in/galaigeorge"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hi@galtap.com",
+        "contactType": "Customer Service"
+      },
+      "offers": [
+        {
+          "@type": "Service",
+          "name": "iOS App Development",
+          "description": "Native iOS apps built with Swift and SwiftUI"
+        },
+        {
+          "@type": "Service",
+          "name": "Android App Development", 
+          "description": "Beautiful Android apps using Kotlin and Jetpack Compose"
+        },
+        {
+          "@type": "Service",
+          "name": "Cross Platform Development",
+          "description": "Cross-platform development with modern frameworks"
+        }
+      ]
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -30,6 +121,13 @@
             --glass-border: rgba(255, 255, 255, 0.2);
             --border-radius: 12px;
             --border-radius-large: 20px;
+            --max-width: 1440px;
+            --container-padding: max(20px, env(safe-area-inset-left));
+        }
+        
+        /* Performance optimizations */
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
@@ -40,6 +138,43 @@
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        
+        /* Accessibility improvements */
+        *:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
         }
         
         /* Typography Scale */
@@ -72,9 +207,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1440px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 max(20px, env(safe-area-inset-left));
+            padding: 0 var(--container-padding);
         }
         
         .logo {
@@ -98,9 +233,11 @@
             font-size: 17px;
             font-weight: 400;
             transition: color 0.3s ease;
+            position: relative;
         }
         
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a:focus {
             color: var(--primary);
         }
         
@@ -116,10 +253,16 @@
             box-shadow: 0 2px 8px var(--shadow-medium);
         }
         
-        .cta-button:hover {
+        .cta-button:hover,
+        .cta-button:focus {
             background: var(--primary-dark);
             transform: translateY(-1px);
             box-shadow: 0 4px 16px var(--shadow-heavy);
+        }
+        
+        /* Main content */
+        .main {
+            min-height: 100vh;
         }
         
         /* Hero Section */
@@ -134,9 +277,9 @@
         }
         
         .hero-content {
-            max-width: 1440px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 max(20px, env(safe-area-inset-left));
+            padding: 0 var(--container-padding);
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
@@ -185,7 +328,8 @@
             box-shadow: 0 4px 16px var(--shadow-medium);
         }
         
-        .btn-primary:hover {
+        .btn-primary:hover,
+        .btn-primary:focus {
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 8px 24px var(--shadow-heavy);
@@ -204,7 +348,8 @@
             box-shadow: 0 2px 8px var(--shadow-light);
         }
         
-        .btn-secondary:hover {
+        .btn-secondary:hover,
+        .btn-secondary:focus {
             background: var(--bg-secondary);
             border-color: var(--primary);
             transform: translateY(-1px);
@@ -226,7 +371,6 @@
         }
         
         .floating-element {
-            position: absolute;
             animation: float 6s ease-in-out infinite;
         }
         
@@ -250,9 +394,9 @@
         }
         
         .container {
-            max-width: 1440px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 max(20px, env(safe-area-inset-left));
+            padding: 0 var(--container-padding);
         }
         
         .section-title {
@@ -303,11 +447,13 @@
             transition: transform 0.3s ease;
         }
         
-        .service-card:hover::before {
+        .service-card:hover::before,
+        .service-card:focus-within::before {
             transform: scaleX(1);
         }
         
-        .service-card:hover {
+        .service-card:hover,
+        .service-card:focus-within {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px var(--shadow-heavy);
             border-color: var(--primary);
@@ -384,10 +530,20 @@
             box-shadow: 0 4px 16px var(--shadow-medium);
         }
         
-        .contact-button:hover {
+        .contact-button:hover,
+        .contact-button:focus {
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 8px 24px var(--shadow-heavy);
+        }
+        
+        .linkedin-button {
+            background: #0077B5;
+        }
+        
+        .linkedin-button:hover,
+        .linkedin-button:focus {
+            background: #005885;
         }
         
         /* Footer */
@@ -514,27 +670,42 @@
             }
         }
         
-        /* Smooth animations and performance optimizations */
-        * {
-            will-change: auto;
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .floating-element {
+                animation: none;
+            }
         }
         
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #0000FF;
+                --text-primary: #000000;
+                --text-secondary: #000000;
+                --bg-primary: #FFFFFF;
+                --bg-secondary: #FFFFFF;
+                --border-light: #000000;
+            }
+        }
+        
+        /* Performance optimizations */
         .service-card,
         .btn-primary,
         .btn-secondary,
         .contact-button,
         .cta-button {
             transform: translateZ(0);
-        }
-        
-        /* Focus states for accessibility */
-        .btn-primary:focus,
-        .btn-secondary:focus,
-        .contact-button:focus,
-        .cta-button:focus,
-        .nav-links a:focus {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
+            will-change: transform;
         }
         
         /* Loading optimization */
@@ -558,264 +729,295 @@
                 transform: translateY(0);
             }
         }
+        
+        /* Print styles */
+        @media print {
+            .header,
+            .hero-visual,
+            .contact-buttons {
+                display: none;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo"></div>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="logo" aria-hidden="true"></div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" aria-label="Go to home section">Home</a></li>
+                <li><a href="#services" aria-label="Go to services section">Services</a></li>
+                <li><a href="#contact" aria-label="Go to contact section">Contact</a></li>
             </ul>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <a href="#contact" class="cta-button" aria-label="Get started with our services">Get Started</a>
         </nav>
     </header>
     
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Crafting <span class="highlight">Exceptional</span> Mobile Experiences</h1>
-                <p>We build premium iOS and Android apps that users love. From concept to App Store, we turn your vision into reality with cutting-edge design and flawless development.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Start Your Project</a>
-                    <a href="#services" class="btn-secondary">Our Services</a>
+    <!-- Main Content -->
+    <main class="main" id="main-content" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="banner" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 id="hero-heading">Crafting <span class="highlight">Exceptional</span> Mobile Experiences</h1>
+                    <p>We build premium iOS and Android apps that users love. From concept to App Store, we turn your vision into reality with cutting-edge design and flawless development.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary" aria-label="Start your mobile app project">Start Your Project</a>
+                        <a href="#services" class="btn-secondary" aria-label="Learn about our services">Our Services</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <svg class="illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mobile app development illustration">
+                        <title>Mobile App Development</title>
+                        <defs>
+                            <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#007AFF"/>
+                                <stop offset="100%" style="stop-color:#34C759"/>
+                            </linearGradient>
+                            <linearGradient id="subtleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5F5F7"/>
+                                <stop offset="100%" style="stop-color:#FFFFFF"/>
+                            </linearGradient>
+                            <filter id="softShadow">
+                                <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.1"/>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Background circles -->
+                        <circle cx="320" cy="80" r="60" fill="url(#subtleGradient)" opacity="0.5"/>
+                        <circle cx="100" cy="220" r="40" fill="url(#subtleGradient)" opacity="0.3"/>
+                        
+                        <!-- Main device -->
+                        <rect x="150" y="50" width="100" height="180" rx="25" ry="25" 
+                              fill="url(#subtleGradient)" filter="url(#softShadow)"/>
+                        <rect x="160" y="60" width="80" height="160" rx="20" ry="20" 
+                              fill="url(#primaryGradient)" opacity="0.1"/>
+                        
+                        <!-- Simple UI elements -->
+                        <rect x="170" y="80" width="60" height="3" rx="1.5" fill="#007AFF" opacity="0.6"/>
+                        <rect x="170" y="90" width="40" height="2" rx="1" fill="#007AFF" opacity="0.4"/>
+                        
+                        <!-- App grid -->
+                        <rect x="170" y="110" width="12" height="12" rx="3" fill="#007AFF" opacity="0.8"/>
+                        <rect x="188" y="110" width="12" height="12" rx="3" fill="#34C759" opacity="0.8"/>
+                        <rect x="206" y="110" width="12" height="12" rx="3" fill="#FF9500" opacity="0.8"/>
+                        
+                        <rect x="170" y="128" width="12" height="12" rx="3" fill="#FF3B30" opacity="0.8"/>
+                        <rect x="188" y="128" width="12" height="12" rx="3" fill="#5856D6" opacity="0.8"/>
+                        <rect x="206" y="128" width="12" height="12" rx="3" fill="#AF52DE" opacity="0.8"/>
+                        
+                        <!-- Simple floating elements -->
+                        <circle cx="80" cy="100" r="3" fill="#007AFF" opacity="0.4" class="floating-element"/>
+                        <circle cx="320" cy="200" r="4" fill="#34C759" opacity="0.3" class="floating-element"/>
+                        <circle cx="50" cy="180" r="2" fill="#FF9500" opacity="0.5" class="floating-element"/>
+                        
+                        <!-- Minimal accent shapes -->
+                        <rect x="280" y="140" width="30" height="30" rx="8" fill="url(#primaryGradient)" opacity="0.2" class="floating-element"/>
+                        <rect x="60" y="60" width="20" height="20" rx="6" fill="url(#primaryGradient)" opacity="0.15" class="floating-element"/>
+                    </svg>
                 </div>
             </div>
-            <div class="hero-visual">
-                <svg class="illustration" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Background gradient -->
-                    <defs>
-                        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#007AFF;stop-opacity:0.1" />
-                            <stop offset="100%" style="stop-color:#34C759;stop-opacity:0.1" />
-                        </linearGradient>
-                        <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#007AFF" />
-                            <stop offset="100%" style="stop-color:#34C759" />
-                        </linearGradient>
-                        <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#1D1D1F" />
-                            <stop offset="100%" style="stop-color:#3A3A3C" />
-                        </linearGradient>
-                        <filter id="glow">
-                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                            <feMerge> 
-                                <feMergeNode in="coloredBlur"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                        <filter id="shadow">
-                            <feDropShadow dx="0" dy="8" stdDeviation="16" flood-opacity="0.15"/>
-                        </filter>
-                    </defs>
-                    
-                    <!-- Background circle -->
-                    <circle cx="250" cy="200" r="180" fill="url(#bgGradient)" opacity="0.5"/>
-                    
-                    <!-- Main phone -->
-                    <g class="floating-element" transform="translate(200, 80)">
-                        <rect x="0" y="0" width="100" height="180" rx="20" ry="20" fill="url(#phoneGradient)" filter="url(#shadow)"/>
-                        <rect x="8" y="8" width="84" height="164" rx="16" ry="16" fill="url(#screenGradient)"/>
-                        <circle cx="50" cy="20" r="3" fill="#007AFF" opacity="0.6"/>
-                        <rect x="20" y="35" width="60" height="4" rx="2" fill="#007AFF" opacity="0.8"/>
-                        <rect x="20" y="45" width="40" height="3" rx="1.5" fill="#34C759" opacity="0.6"/>
-                        <rect x="20" y="55" width="50" height="3" rx="1.5" fill="#FF9500" opacity="0.6"/>
-                        
-                        <!-- App icons -->
-                        <rect x="20" y="75" width="12" height="12" rx="3" fill="#007AFF"/>
-                        <rect x="38" y="75" width="12" height="12" rx="3" fill="#34C759"/>
-                        <rect x="56" y="75" width="12" height="12" rx="3" fill="#FF9500"/>
-                        
-                        <rect x="20" y="95" width="12" height="12" rx="3" fill="#FF3B30"/>
-                        <rect x="38" y="95" width="12" height="12" rx="3" fill="#5856D6"/>
-                        <rect x="56" y="95" width="12" height="12" rx="3" fill="#AF52DE"/>
-                    </g>
-                    
-                    <!-- Secondary phone -->
-                    <g class="floating-element" transform="translate(120, 120) scale(0.8)">
-                        <rect x="0" y="0" width="80" height="140" rx="16" ry="16" fill="rgba(255,255,255,0.9)" filter="url(#shadow)"/>
-                        <rect x="6" y="6" width="68" height="128" rx="12" ry="12" fill="url(#screenGradient)"/>
-                        <circle cx="40" cy="16" r="2" fill="#007AFF" opacity="0.6"/>
-                        <rect x="16" y="28" width="48" height="3" rx="1.5" fill="#007AFF" opacity="0.8"/>
-                        <rect x="16" y="36" width="32" height="2.5" rx="1.25" fill="#34C759" opacity="0.6"/>
-                        
-                        <!-- Chart visualization -->
-                        <rect x="16" y="50" width="8" height="20" rx="2" fill="#007AFF" opacity="0.7"/>
-                        <rect x="28" y="45" width="8" height="25" rx="2" fill="#34C759" opacity="0.7"/>
-                        <rect x="40" y="55" width="8" height="15" rx="2" fill="#FF9500" opacity="0.7"/>
-                        <rect x="52" y="40" width="8" height="30" rx="2" fill="#FF3B30" opacity="0.7"/>
-                    </g>
-                    
-                    <!-- Tablet -->
-                    <g class="floating-element" transform="translate(320, 140) scale(0.7)">
-                        <rect x="0" y="0" width="120" height="90" rx="12" ry="12" fill="rgba(255,255,255,0.95)" filter="url(#shadow)"/>
-                        <rect x="6" y="6" width="108" height="78" rx="8" ry="8" fill="url(#screenGradient)"/>
-                        
-                        <!-- Grid layout -->
-                        <rect x="15" y="15" width="20" height="15" rx="3" fill="#007AFF" opacity="0.8"/>
-                        <rect x="40" y="15" width="20" height="15" rx="3" fill="#34C759" opacity="0.8"/>
-                        <rect x="65" y="15" width="20" height="15" rx="3" fill="#FF9500" opacity="0.8"/>
-                        <rect x="90" y="15" width="20" height="15" rx="3" fill="#FF3B30" opacity="0.8"/>
-                        
-                        <rect x="15" y="35" width="45" height="20" rx="4" fill="#5856D6" opacity="0.8"/>
-                        <rect x="65" y="35" width="45" height="20" rx="4" fill="#AF52DE" opacity="0.8"/>
-                        
-                        <rect x="15" y="60" width="95" height="8" rx="2" fill="#007AFF" opacity="0.6"/>
-                    </g>
-                    
-                    <!-- Floating elements -->
-                    <circle cx="100" cy="100" r="8" fill="#007AFF" opacity="0.3" class="floating-element"/>
-                    <circle cx="400" cy="80" r="6" fill="#34C759" opacity="0.4" class="floating-element"/>
-                    <circle cx="80" cy="300" r="10" fill="#FF9500" opacity="0.3" class="floating-element"/>
-                    <circle cx="420" cy="320" r="7" fill="#FF3B30" opacity="0.4" class="floating-element"/>
-                    
-                    <!-- Code symbols -->
-                    <text x="50" y="350" font-family="SF Mono, Monaco, monospace" font-size="24" fill="#007AFF" opacity="0.4" class="floating-element">&lt;/&gt;</text>
-                    <text x="400" y="360" font-family="SF Mono, Monaco, monospace" font-size="20" fill="#34C759" opacity="0.4" class="floating-element">{}</text>
-                    
-                    <!-- Connection lines -->
-                    <path d="M 150 200 Q 200 150 300 180" stroke="#007AFF" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="5,5">
-                        <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
-                    </path>
-                    <path d="M 300 220 Q 350 200 380 240" stroke="#34C759" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="5,5">
-                        <animate attributeName="stroke-dashoffset" values="0;10" dur="2.5s" repeatCount="indefinite"/>
-                    </path>
-                </svg>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Premium Mobile Solutions</h2>
-                <p>From native development to cross-platform solutions, we deliver apps that stand out in the App Store</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>iOS Development</h3>
-                    <p>Native iOS apps built with Swift and SwiftUI. Optimized for performance, designed for delight, crafted for the App Store.</p>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="services" role="region" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="services-heading">Premium Mobile Solutions</h2>
+                    <p>From native development to cross-platform solutions, we deliver apps that stand out in the App Store</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>Android Development</h3>
-                    <p>Beautiful Android apps using Kotlin and Jetpack Compose. Material Design principles with custom flair.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>Cross Platform Apps</h3>
-                    <p>Cross-platform development with modern frameworks. One codebase, multiple platforms, infinite possibilities.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Exceptional app design that converts. User research, prototyping, and pixel-perfect execution.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>App Store Optimization</h3>
-                    <p>Get discovered. From submission to featuring, we help your app succeed in the App Store.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Maintenance & Updates</h3>
-                    <p>Keep your app fresh with regular updates, new features, and ongoing technical support.</p>
+                <div class="services-grid" role="list">
+                    <article class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">📱</div>
+                        <h3>iOS Development</h3>
+                        <p>Native iOS apps built with Swift and SwiftUI. Optimized for performance, designed for delight, crafted for the App Store.</p>
+                    </article>
+                    <article class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">🤖</div>
+                        <h3>Android Development</h3>
+                        <p>Beautiful Android apps using Kotlin and Jetpack Compose. Material Design principles with custom flair.</p>
+                    </article>
+                    <article class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">🚀</div>
+                        <h3>Cross Platform Apps</h3>
+                        <p>Cross-platform development with modern frameworks. One codebase, multiple platforms, infinite possibilities.</p>
+                    </article>
+                    <article class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Exceptional app design that converts. User research, prototyping, and pixel-perfect execution.</p>
+                    </article>
+                    <article class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">⚡</div>
+                        <h3>App Store Optimization</h3>
+                        <p>Get discovered. From submission to featuring, we help your app succeed in the App Store.</p>
+                    </article>
+                    <article class="service-card" role="listitem">
+                        <div class="service-icon" aria-hidden="true">🔧</div>
+                        <h3>Maintenance & Updates</h3>
+                        <p>Keep your app fresh with regular updates, new features, and ongoing technical support.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Ready to Build Something Amazing?</h2>
-            <p>Let's discuss your next mobile app project and bring your ideas to life</p>
-            <div class="contact-buttons">
-                <a href="mailto:hi@galtap.com" class="contact-button">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
-                </a>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact" role="region" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading">Ready to Build Something Amazing?</h2>
+                <p>Let's discuss your next mobile app project and bring your ideas to life</p>
+                <div class="contact-buttons">
+                    <a href="mailto:hi@galtap.com" class="contact-button" aria-label="Send us an email">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span>Get In Touch</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/galaigeorge" target="_blank" rel="noopener noreferrer" class="contact-button linkedin-button" aria-label="Connect with us on LinkedIn (opens in new tab)">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Mobile Development Team. Crafting exceptional mobile experiences.</p>
+            <p>&copy; 2025 George Galai. Crafting exceptional mobile experiences.</p>
         </div>
     </footer>
     
+    <!-- JavaScript -->
     <script>
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        (function() {
+            'use strict';
+            
+            // Performance optimization: debounced scroll handler
+            let ticking = false;
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+            
+            function updateHeader() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                ticking = false;
+            }
+            
+            function handleScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+            
+            // Smooth scroll for navigation with proper focus management
+            function handleSmoothScroll(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    target.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                    // Manage focus for accessibility
+                    target.focus();
+                }
+            }
+            
+            // Intersection Observer for animations with better performance
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        // Remove from observer for performance
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Initialize when DOM is ready
+            document.addEventListener('DOMContentLoaded', function() {
+                // Smooth scroll event listeners
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', handleSmoothScroll);
+                });
+                
+                // Scroll event listener
+                window.addEventListener('scroll', handleScroll, { passive: true });
+                
+                // Observe service cards with staggered animation
+                document.querySelectorAll('.service-card').forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                    observer.observe(card);
+                });
+                
+                // Error handling for external resources
+                const fontAwesome = document.querySelector('link[href*="font-awesome"]');
+                if (fontAwesome) {
+                    fontAwesome.addEventListener('error', function() {
+                        console.warn('Font Awesome failed to load');
+                        // Fallback: hide icons or use text alternatives
+                        document.querySelectorAll('i[class*="fa"]').forEach(icon => {
+                            icon.style.display = 'none';
+                        });
+                    });
+                }
+                
+                // Performance: Preload critical resources
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(function() {
+                        // Preload images or other resources when browser is idle
+                    });
+                }
+                
+                // Service Worker registration for PWA capabilities (optional)
+                if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+                    navigator.serviceWorker.register('/sw.js').catch(function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
                 }
             });
-        });
-        
-        // Header scroll effect with improved performance
-        let ticking = false;
-        let lastScrollTop = 0;
-        const header = document.querySelector('.header');
-        
-        function updateHeader() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                header.style.transform = 'translateY(0)';
-            }
-            lastScrollTop = scrollTop;
-            ticking = false;
-        }
-        
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateHeader);
-                ticking = true;
-            }
-        });
-        
-        // Intersection Observer for animations with better performance
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+            
+            // Handle errors gracefully
+            window.addEventListener('error', function(e) {
+                console.warn('JavaScript error:', e.error);
+                // Report to analytics or error tracking service
             });
-        }, observerOptions);
-        
-        // Observe service cards with staggered animation
-        document.querySelectorAll('.service-card').forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-            observer.observe(card);
-        });
-        
-        // Preload critical resources
-        const preloadLink = document.createElement('link');
-        preloadLink.rel = 'preload';
-        preloadLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
-        preloadLink.as = 'style';
-        document.head.appendChild(preloadLink);
+            
+            // Handle unhandled promise rejections
+            window.addEventListener('unhandledrejection', function(e) {
+                console.warn('Unhandled promise rejection:', e.reason);
+                e.preventDefault();
+            });
+            
+        })();
     </script>
 </body>
 </html> 
